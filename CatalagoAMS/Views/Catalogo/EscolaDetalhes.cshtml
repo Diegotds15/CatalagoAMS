@@ -1,0 +1,29 @@
+﻿@model Escola
+
+<div class="escola-detalhes">
+    <h2>@Model.Nome</h2>
+
+    <div class="escola-info">
+        <p><strong>Endereço:</strong> @Model.Endereco</p>
+        <p><strong>Telefone:</strong> @Model.Telefone</p>
+        <p><strong>Diretor:</strong> @Model.Diretor</p>
+        <p><strong>Auxiliares:</strong> @Model.Auxiliares</p>
+
+        <div class="escola-metricas">
+            <div class="metrica">
+                <span>IDEB - Indicador de Qualidade</span>
+                <strong>@Model.Ideb</strong>
+            </div>
+            <div class="metrica">
+                <span>Anos Finais</span>
+                <strong>@Model.AnosFinais</strong>
+            </div>
+            <div class="metrica">
+                <span>Ensino Médio</span>
+                <strong>@Model.EnsinoMedio</strong>
+            </div>
+        </div>
+
+        <p><strong>Código INEP:</strong> @Model.CodigoINEP</p>
+    </div>
+</div>

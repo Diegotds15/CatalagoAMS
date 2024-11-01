@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Municipio>
+
+<div class="catalogo-container">
+    <div class="municipios-list">
+        @foreach (var municipio in Model)
+        {
+            <div class="municipio-item">
+                <h3>@municipio.Nome</h3>
+                @foreach (var escola in municipio.Escolas)
+                {
+                    <a href="@Url.Action("EscolaDetalhes", new { id = escola.Id })"
+                       class="escola-link">@escola.Nome</a>
+                }
+            </div>
+        }
+    </div>
+</div>
